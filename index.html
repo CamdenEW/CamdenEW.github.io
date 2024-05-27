@@ -1,1 +1,289 @@
-test
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Camden Elliott-Williams</title>
+    <style>
+      body {
+      }
+      .head {
+      //height: 80px;
+      //background-image: url('mountains.jpg');
+      //background-repeat: no-repeat;
+      //background-attachment: fixed;
+      //background-size: auto 240px;
+      //background-position: center top;
+      }
+      button.nav {
+      background-color: #2BB0CC; /* Teal */
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      //cursor: pointer;
+      float: center;
+      }
+      .nav:hover {
+      background-color: #2288B2;
+      }
+      .banner {
+      padding: 15px 32px;
+      font-size: 16px;
+      }
+      td.buffer {
+      padding:12px;
+      vertical-align:top;
+      }
+      ul.inpar {
+      margin-top:0px;
+      }
+      code.name {
+      font-size:15px;
+      color:darkslateblue;
+      }
+    </style>
+    <script type="text/javascript">
+      // display only one of the major sections, and update url
+      function switchDisplay(display) {
+      for (let x of document.getElementsByClassName("majornav")) {x.setAttribute("hidden","")}
+      if (display == "") {
+        display = "aboutme";
+      }
+      let elem = document.getElementById(display);
+      if (elem == null) {
+        display = "aboutme";
+        elem = document.getElementById(display);
+      }
+      elem.removeAttribute("hidden");
+      history.replaceState(undefined, undefined, "#"+display);
+      }
+
+      window.addEventListener("load", (event) => {
+        var hash = location.hash.substr(1);
+        switchDisplay(hash);
+      });
+    </script>
+  </head>
+
+  <body style="overflow-y:scroll;">
+    <center>
+      <div class="head" style="margin-bottom:4pt;">
+	<center>
+	  <h1 style="margin-top: 0; margin-bottom: 0pt;">Camden Elliott-Williams</h1>
+	  <h3 style="margin-top: 0; margin-bottom: 0pt;">Research Mathematician and Computation Scientist,</h3>
+	  Strategist, Philosopher, Poet, and Performance Artist<br><br>
+	</center>
+      </div>
+      <div style="margin-bottom: 4pt;">
+	<button type="button" class="nav banner" id="button-aboutme" onclick="switchDisplay('aboutme')">About Me</button>
+	<button type="button" class="nav banner" id="button-research" onclick="switchDisplay('research')">Research</button>
+	<button type="button" class="nav banner" id="button-teaching" onclick="switchDisplay('teaching')">Teaching & Community</button>
+	<!--<button type="button" class="nav banner" id="button-community" onclick="switchDisplay('community')">Community</button> -->
+	<button type="button" class="nav banner" id="button-physique" onclick="switchDisplay('avocations')">Avocations</button>
+	<button type="button" class="nav banner" id="button-contact" onclick="switchDisplay('contact')">Contact</button>
+      </div>
+
+      <table border=0 cellspacing=0 cellpadding=0 style="width: 100%; max-width: 900px;">
+	<tr><td>
+	    <div id="aboutme" class="majornav">
+	      <center>
+	      <table style="width:100%; padding:0px"">
+		<tr style="padding:0px">
+		  <td style="padding:0px; vertical-align: top;">
+		    <img src="camden.jpg" alt="Camden" style="width:150px; padding:20px 20px 5px 20px"><br>
+		    <center><button type="button" class="nav" onclick="switchDisplay('contact')">Contact Info</button></center>
+		  </td>
+		  <td>
+		    <p>Hi!  This website is about my interests and experiences.  Thanks for being curious!</p>
+
+		    <p>My general approach to life is to strive for adroitness in mind and body, meticulousness where it matters, and thoughtful consideration as the foundation for all.</p>
+
+		    <p>My research interests tend to be categorized under theoretical computer science and applied mathematics, in the <b>understanding and optimization of complex systems</b>.  I leverage concepts from artificial intelligence, number theory, statistical modeling, algorithmic game theory, cognitive psychology, and other related fields.  Check out the <button type="button" class="nav" onclick="switchDisplay('research')">Research</button> section, or just drop me a note if you have an interesting problem to consider!</p>
+
+		    <p>I earned a Ph.D. and M.S. in computer science at CU Boulder advised by <a target="_blank" rel="noopener noreferrer" href="https://home.cs.colorado.edu/~mozer/index.php">Mike Mozer</a>.  Prior to that, I worked for many years as a research mathematician for the government.  I give minimal details of that work in public venues due to its sensitivity, although you can try reaching out to me for additional info.  As an undergraduate, I majored in Math, Physics and Theater with a minor in Creative Writing.  I was the first triple major at Earlham College, and still the only one to finish in four years, to my knowledge.</p>
+
+		    <p>Following the tradition of liberal arts, I have also practiced many forms of movement and lyricism.  The <button type="button" class="nav" onclick="switchDisplay('avocations')">Avocations</button> section mentions a few of these endeavors.  If you have a project needing a practitioner or director/choreographer while I'm in the greater Denver area, I'm happy to chat.</p>
+
+		    <p>I especially love the infinite combo of being inspired by and inspiring others.  I list some formal pursuits thereof in a <button type="button" class="nav" onclick="switchDisplay('teaching')">Teaching & Community</button> section.</p>
+		  </td>
+		</tr>
+	      </table>
+	      </center>
+	    </div>
+
+	    <div id="contact" class="majornav">
+	      <h2>Name Spelling</h2>
+	      <p>Elliott-Williams is all one long hyphenated last name.</p>
+
+	      <p>I will point out that my Elliott has two <i>t</i>s.  This is significant for my family, since my grandmother was a one-<i>t</i> Elliot before marrying into the two-<i>t</i> Elliott line from across the river.</p>
+
+	      <h2>Contact Info</h2>
+	      <p>Email: e.w.[first name]@gmail.com</p>
+	      <p>Please avoid referencing my name or other personal attributes in the context of any aliases that I may use.</p>
+	    </div>
+
+
+
+	    <div id="research" class="majornav">
+	      <center><h2>Research</h2></center>
+	      <p>My research interests tend to be categorized under theoretical computer science and applied mathematics, in the <b>understanding and optimization of complex systems</b>.  I only provide minimal details in public-facing venues of sensitive government work, although you can try reaching out to me for additional info.</p>
+
+	      <p>Funded Research
+		<ul>
+		  <li><b>Nanobelt Fabrication for Gas Sensing.</b>  As summer research at Earlham College, we sought to duplicate recent new nanobelt fabrication methods.  I got to use a scanning electron microscope, spectrometer, gold sputtering device, and the fabrication cooker.  With Zack Ferraro and Andrew Cleland, I presented a poster at an undergraduate research conference in 2006.</li><br>
+
+		  <li><b>Optimization of Matrix Equivalence.</b>  In my first office tour for the U.S. government, I worked on (average-case) efficient methods for calculating matrix equivalence under permutation of rows and columns.  My methods improved bottleneck run-time by several orders of magnitude, and I received a Group Cash Award (2008) for an "inordinate amount of coordination and interaction with others... he pioneered the development of math-based algorithms."  My classified peer-reviewed paper "Efficient Calculation of Matrix Equivalence under Permutation of Rows and Columns," was accepted for office publication in 2008.</li><br>
+
+		  <li><b>Parallelized HPC Algorithms.</b>  This work was during my second office tour for the U.S. government.  I authored a peer-reviewed paper published in office, May 2009.  I received an Individual Time-Off Award (2011) for "significant technical work...key in finding a solution."</li><br>
+
+		  <li><b>Information Assurance Cryptographic Analysis.</b>  This work was during my third office tour for the U.S. government.  I authored a peer-reviewed paper on novel analysis methods published in Vulnerability Analysis and Operations Technical Reports, April 2010.</li><br>
+
+		  <li><b>Correlating Spatiotemporal Events.</b>  In my fourth office tour for the U.S. government, I worked on improving statistical methods to correlate spatiotemporal events along with concept representations.  I received an Individual Time-Off Award (2012) for this work in conjunction with neocortex modeling efforts (next paragraph), "significantly influencing the direction taken by future research."  With one co-author (name protected), we authored a note accepted for office publication, March 2010.  With two co-authors (names protected), I authored a paper on model-based approaches to correlating stochastic processes in 2010.  I presented "Model-Based Temporal Correlation," at the international Information Processing Conference poster session, October 2010, as well as at  math and statistical methods seminars in November and December of that year.</li><br>
+
+		  <li><b>Neuromimetic Image Processing.</b>  In my fifth office tour for the U.S. government, I worked on neuroscience-inspired image processing algorithms.  I received an Individual Time-Off Award (2012) for this work in conjunction with correlating event sequences (previous paragraph), "significantly influencing the direction taken by future research."  I authored a paper on the evaluation and improvement of a proprietary commercial method, October 2012.</li><br>
+
+		  <li><b>Signals Intelligence Cryptographic Analysis.</b>  I was selected for a multidisciplinary team collaboration for a priority project with the U.S. government.  I received an Individual Time-Off Award for "thorough" and "excellent" contributions and "persistence."  I was a co-author (with team) on a peer-reviewed paper published in Technical Notes, October 2013.</li><br>
+
+		  <li><b>Summer Conference of Applied Mathematical Problems.</b>  I was selected for a summer conference in which I worked on classified HPC algorithms.  I authored two peer-reviewed technical papers on algorithm evaluation methods and algorithm design improvements, November and December 2013.  I delivered a talk at the Cryptanalytic Research and Diagnosis Conference, March 2014.</li><br>
+
+		  <li><b>Intertemporal Choice Modeling.</b>  I was involved in developing computational models of decision making to determine personalized interventions that allow an individual to better overcome immediate reward temptation and improve long-term goal outcomes.  We used the models to determine a limited schedule of incentives that maximizes expected outcomes and improves individual decision making.  I contibuted critical ideas of incentive limitations as well as approximation methods to make modelling computationally tractable, coded the models, and helped run human experiments.  This work appears in Sukumar, Ward, Elliott-Williams, Hakimi, & Mozer (2022).</li><br>
+
+		  <li><b>Active Selection Bayesian Optimization.</b>  As a Research Assistant working with Mike Mozer at University of Colorado Boulder, I improved and expanded a Bayesian optimization tool for active selection, Spearmint (Snoek, Larochelle, & Adams, 2012).  The main novelty that I added was a pairwise preference observation model.  Pairwise assesment requires an additional level of abstraction because the observations are determined based on the combination of <i>two</i> latent qualites estimated by a Gaussian process model, which means that estimation is more susceptible to observation noise.  The purpose was to create a black-box tool available for forced-choice psychology experiments.</li><br>
+
+		  <li><b>Face Detection and Localization.</b>  I researched classic and neural net machine learning methods for smart phone and banking facial recognition products as a summer research intern with Sensory, Inc.  My work required coordination with teammates working on downstream identity matching.  Our product shipped in all phones of a major manufacturor starting in 2017.</li><br>
+
+		  <li><b>Facilitating Human Perception via Task-Specific Image Modulations</b>  For my PhD with Mike Mozer at University of Colorado Boulder, I developed general deep neural net image-to-image transformation methods to support people in better performing ordinary visual decision and reasoning tasks.  The goal was to manipulate images to allow people to use their existing natural perceptual capabilities, minimizing learning required by the user and contention between human and machine.  Because human-in-the-loop training would be costly, our transformations are trained to improve neural net surrogates on task, along with select auxiliary losses.  We considered three support use cases for machine input relative to existing perceptual capabilities: typical vision, degraded vision, and augmented vision.  I designed and conducted six human perceptual studies to demonstrate a significant increase in discrimination accuracy with learned transforms across a range of tasks for degraded vision.  Additional simulations showed promise for these methods to also support people who have typical vision, and even to incorporate information beyond typical human sensing ability without retraining users.  Preparations for publication are ongoing.</li><br>
+		</ul>
+	      </p>
+
+	      <p>Additional Projects
+		<ul>
+		  <li><b>Mathematical Derivation of Expected Difference.</b>  As a senior math major, I derived the general equation for the expected difference between two random natural numbers up to size N.  I presented this to my Senior Seminar class, Fall 2006.</li><br>
+
+		  <li><b>Biparental Reproduction Systems.</b>  After being exposed to evolutionary optimization algorithms, I researched different hypothetical systems of biparental reproduction.  I developed formal measures of desired properties including pairwise viability, inbreeding safeguards, and robustness to and recovery from decimation events.  I discovered new systems with superior properties which are unlikely to naturally develop through gradual processes (optimization space is not convex on vertex and edge edits).  I presented these ideas at a work seminar, June 2011.</li><br>
+
+		  <li><b>Collaborative Network Production.</b>  I became interested in how to optimize the sharing of non-rivalrous production (such as knowledge production) among multiple actors when limiting the number of sharing channels.  The practice of "continuous communication" in Agile Development (a ubiquitous Systems Engineering approach) presents challenges when scaling the number of stakeholders, including information overload and anlysis paralysis.  Product innovation is also a concern, which I postulate to be harder without some amount of isolation.  I designed a simulation platform and established the superiority of certain constrained network configurations under a variety of production models.  I presented some of this work as a final project for a Network Analysis and Modeling graduate course, December 2016.</li><br>
+
+		  <li><b>Emergent Colony Behavior.</b>  I proposed an alternative model for resource retrieval by simulated (ant-inspired) colonies of actors with limited capabilities of perception and environment modification (scalar hormone scent).  Through simulations, I demonstrated clear cases of improved emergent behavior (resource retrieval efficiency).  I presented this work as a final project for a Multi-Agent Systems graduate course, May 2018.</li><br>
+
+		  <li><b>Pairwise Ranking.</b>  I developed a conceptual model that results in a ranking algorithm based on pairwise comparisons that is similar to SpringRank (De Bacco, Larremore, & Moore, 2018).  My model better generalizes to scalar preference signals in a way that preference variance can be interpreted and factored into ranking.  I intend to match my evaluation platform to what was used for SpringRank for performance comparisons in preparation for publication.</li><br>
+
+		  <li><b>Tournament Designs.</b>  Tournament designs can be viewed as a more constrained form of pairwise ranking, where the options being ranked may only be able to engage in one pairwise assessment within particular time windows.  This prompts compact parallel scheduling of multiple options to avoid long delays.  The efficacy of different tournament designs has only been scrutinized on a scientific basis quite recently.  For example, Sziklai, Biró, & Csató (2022) suggest that the ubiquitous 1895 Swiss design has advantages over other simple designs, although more modern Swiss variants are not considered in that work.  I have formulated novel designs that I've proven improve over Swiss across a wide variety of performance measures and option environments.  This research is ongoing, with an intent to publish.</li><br>
+		</ul>
+	      </p>
+	    </div>
+
+
+
+	    <div id="teaching" class="majornav">
+	      <center><h2>Teaching & Community</h2></center>
+
+	      <div>Teaching Assistant, CU Boulder Department of Computer Science
+		<ul class="inpar">
+		  <li><b>Algorithms</b> undergraduate course (Fall 2020, Spring 2021, Fall 2021).  Designed and instructed weekly recitations; designed and graded homework and quizzes; reviwed exam designs and graded student submissions; mentored students; fielded questions during main lectures, office hours, and asynchronous online platform.</li>
+		  <li><b>Neural Nets and Deep Learning</b> graduate course (Spring 2020).  Collaborated on homework design; mentored students; fielded questions during main lectures, office hours, and asynchronous online platform; designed and presented one lecture.</li>
+		  <li><b>High Performance Scientific Computing</b> graduate course (Fall 2019).  Designed and instructed weekly labs.</li>
+		</ul>
+	      </div>
+
+	      <div>Class Lead, Eastern Cooperative Recreation School
+		<ul class="inpar">
+		  <li><b>Strategic Storytelling Card Game</b> (Summer 2021).  Designed and led workshop.</li>
+		</ul>
+	      </div>
+
+	      <div>Workshop and Conference Contributions
+		<ul class="inpar">
+		  <li>Volunteer, Conference on Economics & Computation, Boulder CO (2022)</li>
+		  <li>Volunteer, Conference on Neural Information Processing Systems, Montreal Canada (2018)</li>
+		  <li>Presenter, Cryptanalytic Research and Diagnosis Conference (2014)</li>
+		  <li>Participant, Summer Conference on Applied Mathematical Problems, Princeton NJ (2013)</li>
+		  <li>Poster Presenter, Information Processing Conference (2010)
+		  <li>Participant, Inter-Agency Workshop on HPC Resilience at Extreme Scale, Catonsville MD (2012)</li>
+		  <li>Participant, Department of Defense Satisfiability Workshop, Linthicum MD (2008)</li>
+		</ul>
+	      </div>
+
+	      <div>Peer Mentor
+		<ul class="inpar">
+		  <li>University of Colorado Boulder, Graduate Mentor (2017, 2019, 2020)</li>
+		  <li>Earlham College, Math Tutor (2004-2005)</li>
+		  <li>Gould Academy, Math Tutor (2002-2003; co-founded program)</li>
+		</ul>
+	      </div>
+
+	      <div>Teaching Assistant, National Cryptologic School
+		<ul class="inpar">
+		  <li><b>Information Security Mathematics</b> (Spring 2012, Spring 2013); mentored students, fielded questions, designed and presented one lecture</li>
+		</ul>
+	      </div>
+
+	      <p>Council Member, Crypto-Mathematics Institute (elected 2013-2014, representative 2009-2011)</p>
+
+	      <p>MathNet Co-leader, work-based new hire welcoming (2010-2011, Member 2009-2010); received a Star Award "in recognition of your service" to the community</p>
+
+	      <p>Graduation Biography Reader (2010), selected by preceding work-program cohort for significance to their cohort</p>
+
+	      <p>Co-Director, RoboWar (2004-2006, officiator 2004, contributor 2001-2006)</p>
+
+	      <p>I've made a few other contributions to various game communities under an alias.  Check out https://theo-donly.github.io/ (not yet fully populated)</p>
+	    </div>
+
+
+
+	    <div id="avocations" class="majornav">
+	      <center><h2>Avocations</h2></center>
+	      <p>I (luckily) learned early how to be a good learner to support my many interests.  Here I list some of those intersts.</p>
+
+	      <div> Movement
+		<ul class="inpar">
+		  <li> <b>Gymnastics</b> -- trained and competed in USA Men's Gymnastics with Rodney Gendron at Andy Valley Olympic School of Gymnastics up to what was then Level 4 (the first optional level).</li>
+		  <li> <b>Dance</b> -- various classical and modern forms, including classes at Earlham College and Eastern Cooperative Recreation School, primarily folk and contemporary along with some exposure to tap, break, and capoeira.</li>
+		  <li> <b>Parkour</b> -- trained with Travis Graves at Primal Fitness, including two advanced classes.</li>
+		  <li> <b>Juggling</b> -- required to leave the National Mall because my practice was drawing too big of a crowd, hah!
+		  <li> <b>Physical eloquence</b> from the work of Tony Montanaro.
+		  <li> I began skateboarding at age 37 to keep up with my kids!  I'd love to try to get into surfing, but it's a bit of a challenge in Colorado.
+		</ul>
+	      </div>
+
+	      <div> Music
+		<ul class="inpar">
+		  <li> Tenor in a singing group with <a target="_blank" rel="noopener noreferrer" href="https://raf.prof/">Raf</a>, <a target="_blank" rel="noopener noreferrer" href="http://stechschulte.net/">John</a>, and <a target="_blank" rel="noopener noreferrer" href="http://www.cs.colorado.edu/~jgrochow/index.html">Josh</a>, named The Cult of Poseidon for repertoire of English and Irish sea songs, along with 14th century madrigals.</li>
+		  <li> Tenor of Earlham College Madrigal Singers (and Concert Choir) for four years, with dozens of performances.</li>
+		  <li> Trained in classical and jazz piano for 10 years.</li>
+		</ul>
+
+	      <div> Theatrics
+		<ul class="inpar">
+		  <li> "Guys and Dolls" (Sky Masterson), Earlham College
+		  <li> "Act Without Words II" (director) directing class at Earlham College
+		  <li> "The Miser" (Jacques), Earlham College
+		  <li> "The Bald Soprano" (Mr. Smith), directing class at Earlham College
+		  <li> "Professor George" (Grazzio), Earlham College
+		  <li> "A Day in Hollywood, A Night in the Ukraine" (Fred Astaire, company)
+		  <li> "Triangle Shirtwaist Factory" (Reporter), Earlham College
+		  <li> "The Other Five Percent" (Hughie), directing class at Earlham College
+		  <li> "The Foreigner" (Charlie), high school
+		  <li> "Carousel" (Billy Bigalow), high school
+		</ul>
+	      </div>
+
+	      <div>Strategy Games
+		<ul class="inpar">
+		  <li> I've explored (and designed) various strategy games over the years.  Here I list a few, or you can check out my public gaming alias at <a target="_blank" rel="noopener noreferrer" href="https://theo-donly.github.io/">https://theo-donly.github.io/</a></li>
+		  <li> Middle Earth Collectable Card Game, respected rules ranger, winner of multiple international tournaments, developed cooperative variant and sealed pack generation web app</li>
+		  <li> Dungeons & Dragons / Pathfinder, developed a menu-based approach to ability score generation to better achieve the fairness of the point buy system while capturing the correlations within a character's set of ability scores</li>
+		  <li> Magic: The Gathering, hosted tournaments in college</li>
+		  <li> World of Warcraft, theorycrafter for top guild dps and healing into Cataclysm</li>
+		  <li> RoboWar (autonomous robot battler), Most Innovative and 2nd place overall awards in international tournament</li>
+		  <li> Notable games I've made include Dance Breakoff (breakdancing card game), and "The Game" (with Mat Stork, first grade recess, inclusive strategy game they were still playing when I drove past 20 years later!)</li>
+		</ul>
+	      </div>
+	    </div>
+
+	</td></tr>
+      </table>
+    </center>
+
+  </body>
